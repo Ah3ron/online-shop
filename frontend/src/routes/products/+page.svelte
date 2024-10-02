@@ -7,7 +7,7 @@
 
   async function fetchProducts() {
     try {
-      const response = await fetch("http://localhost:3000/api/products");
+      const response = await fetch(import.meta.env.API_URL);
       if (!response.ok) {
         throw new Error("Ошибка при загрузке данных");
       }
