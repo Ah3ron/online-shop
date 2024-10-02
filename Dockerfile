@@ -38,7 +38,7 @@ RUN go mod download
 COPY backend/ .
 
 # Собираем Go приложение
-RUN go build -o myapp .
+RUN CGO_ENABLED=0 GOOS=linux go build -o myapp .
 
 # Финальный образ
 FROM alpine:latest
