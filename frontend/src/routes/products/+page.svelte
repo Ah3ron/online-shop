@@ -40,10 +40,10 @@
     <p class="text-center">Нет доступных товаров.</p>
   {:else}
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 shadow-2xl"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
     >
       {#each products as product}
-        <div class="card bg-base-200 rounded-lg shadow-lg p-4">
+        <div class="card bg-base-200 rounded-lg shadow-xl p-4">
           <h2 class="text-xl font-semibold mb-2">{product.name}</h2>
           <p class="text-lg font-bold mb-4">Цена: {product.price} ₽</p>
           <button class="btn btn-primary w-full">Добавить в корзину</button>
