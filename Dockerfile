@@ -23,7 +23,7 @@ RUN pnpm run build
 RUN mv build views
 
 # Этап сборки Go приложения
-FROM golang:1.20 AS backend-build
+FROM golang:1.23.1 AS backend-build
 
 # Установим рабочую директорию
 WORKDIR /app/backend
