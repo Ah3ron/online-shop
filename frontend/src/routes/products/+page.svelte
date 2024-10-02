@@ -1,15 +1,13 @@
 <script>
   import { onMount } from "svelte";
 
-  const API_URL = import.meta.env.API_URL;
-
   let products = [];
   let loading = true;
   let error = null;
 
   async function fetchProducts() {
     try {
-      const response = await fetch(API_URL + "/api/products");
+      const response = await fetch(window.location.origin + "/api/products");
       if (!response.ok) {
         throw new Error("Ошибка при загрузке данных");
       }
